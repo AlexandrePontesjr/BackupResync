@@ -13,7 +13,4 @@ https://www.youtube.com/watch?v=j2vBT3T79Pg
 
 https://tonyteaches.tech/rsync-backup-tutorial/
 
-https://www.youtube.com/watch?v=z35ZPELo5_Y&list=PLfGMDnLT7V_MRKA5y-35nc97gRjQ5AVwt&index=6
-
-
 Melhor maneira que eu achei de fazer um backup automatizado
