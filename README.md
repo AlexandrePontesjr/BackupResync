@@ -9,6 +9,22 @@ find
 Cron
 Rsync
 
+comando de backup do mysql novosga dentro do container em tempo real
+
+sudo docker exec novosga_mysqldb_1  /usr/bin/mysqldump -u root --password='semad!dsis' novosga2 >  /home/docker/backup/daily/backup.sql
+
+
+Esse comando compacta o dump do mysql e salva na pasta com a ano/mes/dia e mantem apenas 7 pastas de backup
+
+#usar o dump criado na pasta diario compactar e criar uma pasta com a data do dia
+sudo tar -zcf ~/backup/daily/backup-novosga-$(date +%Y%m%d).tar.gz -C ~/ mysqldump
+find ~/backup/daily/* -mtime +7 -delete
+
+-----------------------------------
+
+
+
+
 https://www.youtube.com/watch?v=j2vBT3T79Pg
 
 https://tonyteaches.tech/rsync-backup-tutorial/
