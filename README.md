@@ -17,6 +17,7 @@ sudo docker exec novosga_mysqldb_1  /usr/bin/mysqldump -u root --password='semad
 Esse comando compacta o dump do mysql e salva na pasta com a ano/mes/dia e mantem apenas 7 pastas de backup
 
 #usar o dump criado na pasta diario compactar e criar uma pasta com a data do dia
+
 sudo tar -zcf /home/docker/backup/daily/backup-novosga-$(date +%Y%m%d).tar.gz -C /home/docker/ mysqldump
 find /home/docker/backup/daily/* -mtime +7 -delete
 
